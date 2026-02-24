@@ -1,0 +1,44 @@
+
+---
+
+## `.gitignore`
+
+```gitignore
+# Terraform local state
+**/*.tfstate
+**/*.tfstate.*
+crash.log
+crash.*.log
+
+# Terraform working directory
+**/.terraform/*
+**/.terraform.lock.hcl
+
+# Variable files (often contain secrets)
+**/*.tfvars
+**/*.tfvars.json
+
+# If you want to commit safe tfvars, remove the lines above and ignore only secrets:
+# **/*.auto.tfvars
+# **/*.auto.tfvars.json
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI config files
+.terraformrc
+terraform.rc
+
+# IDE / OS junk
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Disabled backend files (keep out of git)
+**/*.disabled
